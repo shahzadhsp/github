@@ -1,0 +1,25 @@
+1. First setup ADB (android debug bridge).
+	add path of platform-tools in environment variables
+	path will look like => 
+		C:\Users\USERNAME\AppData\Local\Android\sdk\platform-tools.
+	how to fix abd is not recognized... =>
+		https://droidwin.com/fix-adb-not-recognized-error/
+2. Turn on developer mode on your device. Turn on usb debugging and wireless debugging.
+3. Type: 'adb tcpip 5555' in the command line or Terminal and press Enter
+4. Find your phone's IP address in Settings > About Phone > Status > IP Address.
+5. Back in the command line or Terminal, type: adb connect your-ip
+
+
+If you are unable to connect in wireless mode try the fixes listed on this site:
+https://appuals.com/no-connection-could-be-made-adb-error-10061/#:~:text=The%20ADB%20error%2010061%20means%20that%20the%20remote,the%20following%20can%20be%20categorized%20as%20the%20main%3A
+
+This method works for most of the devices(tested on 2):
+first connect your mobile via cable and turn on developer mode and wireless debugging
+then type this command in powershell
+adb devices
+the connected device's Id will be shown, copy it.
+then type this command in powershell
+adb -s <YourDeviceId> tcpip 5555
+then type the following:
+adb -s <YourDeviceId> connect <ip addr>
+Note: <> these operators should not be written in command

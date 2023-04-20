@@ -1,0 +1,9 @@
+first time when you push the data on github
+git config --global user.email "Your Name "
+git config --global user.email "your email"
+///
+git init press enter
+git git add . press enter
+git commit -m "This is my first comment"
+git remote add origin your repositeroy link add here and then press enter
+git push -u origin master
